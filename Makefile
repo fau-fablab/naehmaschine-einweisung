@@ -1,0 +1,2 @@
+TARGET=Einweisung_Naehmaschine Einweisungsliste_Naehmaschine
+include fablab-document/Makefile.include

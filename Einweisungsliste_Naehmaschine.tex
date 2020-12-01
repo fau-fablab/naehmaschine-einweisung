@@ -1,0 +1,49 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% COPYRIGHT: (C) 2012-2020 FAU FabLab and others
+% CC-BY-SA 3.0
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\basedir}{./fablab-document/}
+\documentclass{\basedir/fablab-document}
+\renewcommand{\texteuro}{\euro}
+\usepackage{ifthen}
+\usepackage{xspace}
+\def\tabularnewcol{&\xspace} % hässlicher Workaround von http://tex.stackexchange.com/questions/7590/how-to-programmatically-make-tabular-rows-using-whiledo
+
+
+\usepackage{tabularx} % Tabelle mit teilweise gleich großen Spalten
+\title{Einweisungsliste Nähmaschine Pfaff XYZ 200 \todo{genaues Modell nennen}}
+\fancyfoot[C]{\hspace{7em} \small https://github.com/fau-fablab/naehmaschine-einweisung}
+\fancyfoot[L]{Einweisungsliste Nr. \underline{\hspace{3em}}}
+
+\author{Martin u.a.} % basiert auf Stickmaschinen-Einweisung von Martin
+
+\begin{document}
+%\maketitle
+
+Ich bestätige mit meiner Unterschrift verbindlich, dass ich
+\begin{itemize}
+ \item die Einweisung gelesen und verstanden habe
+ \item unter Anleitung erfolgreich ein Werkstück mit der Nähmaschine bearbeitet habe.
+\end{itemize}
+
+\todo{Genauer Modus der Einweisung - was darf man und ab wann soll man die Einweisung erhalten}
+
+Die Einweisung gilt für ein Jahr und muss dann aufgefrischt werden. % (Das ist so gemäß Vorgabe Arbeitssicherheit der Uni)
+
+\newcounter{i}
+\setcounter{i}{1}
+
+\newcommand{\leerezeile}{\hspace{2em} \tabularnewcol \hspace{3em} \tabularnewcol \hspace{2.5em} \tabularnewcol \hspace{2.5em} \tabularnewcol \vbox{\vspace{2em}} \tabularnewcol \tabularnewcol \tabularnewcol \tabularnewline \hline}
+
+\begin{tabularx}{\textwidth}{|l|l|l|l|X|X|X|X|}
+  \hline
+  \textbf{Nr.} & \textbf{Datum} & \textbf{von} & \textbf{bis} & \textbf{Name} & \textbf{Unterschrift} & \textbf{Einweisender} & \textbf{Unterschrift} \\ \hline
+  \whiledo{\value{i}<14}%
+  {%
+    \stepcounter{i} \leerezeile
+  }%
+  \leerezeile % doofer Workaround, eigentlich sollte das auch in der Forschleife gehen! Ohne dies wird die Spaltenbegrenzung von Spalte 1 zu weit gezeichnet.
+\end{tabularx}
+
+\end{document}
