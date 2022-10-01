@@ -1,7 +1,7 @@
 Nähmaschine Einweisung
 =====================
 
-Einweisung des [FAU FabLab](https://fablab.fau.de) für die [Nähmaschine Pfaff 260](https://fablab.fau.de/tool/naehmaschine).
+Einweisung des [FAU FabLab](https://fablab.fau.de) für die [Nähmaschine Pfaff 260](https://fablab.fau.de/tool/textilbearbeitung/naemaschine/).
 
 Download
 --------
