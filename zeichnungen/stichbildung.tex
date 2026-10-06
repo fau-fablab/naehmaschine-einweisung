@@ -1,0 +1,75 @@
+% Prinzip des Doppelsteppstichs nach der bisherigen gemeinfreien Grafik.
+\begin{tikzpicture}[x=1cm,y=1cm,line cap=round,line join=round,
+  ober/.style={draw=fablab,line width=1.35pt},
+  unter/.style={draw=orange!80!black,line width=1.35pt},
+  beschriftung/.style={font=\small,anchor=west}]
+\node[beschriftung,font=\small\bfseries] at (0,4.7){Stichbildung (schematisch)};
+\path[draw=black!40,fill=black!6] (0,2.55) rectangle (9,3.05);
+\path[draw=black!40,fill=black!12] (0,2.05) rectangle (9,2.55);
+\node[font=\scriptsize,fill=white,inner sep=2pt] at (8.0,2.8){Stofflagen};
+% Bereits gebildete Stiche: Verschlingung zwischen den Stofflagen.
+\foreach \x in {.75,1.85,2.95}{
+ \draw[ober] (\x-.55,3.05)--(\x-.14,3.05) .. controls (\x-.02,3.05) and (\x-.16,2.47) .. (\x,2.47)
+ .. controls (\x+.17,2.47) and (\x+.02,3.05) .. (\x+.16,3.05)--(\x+.55,3.05);
+ \draw[unter] (\x-.55,2.05)--(\x-.15,2.05) .. controls (\x,2.05) and (\x-.16,2.62) .. (\x,2.62)
+ .. controls (\x+.16,2.62) and (\x,2.05) .. (\x+.15,2.05)--(\x+.55,2.05);
+}
+% Nadel mit Öhr, Oberfadenschlinge und Greifer darunter.
+\path[draw=black!75,fill=white,line width=.8pt] (4.47,4.3)--(4.47,2.05)--(4.6,1.7)--(4.73,2.05)--(4.73,4.3)--cycle;
+\draw[black!60] (4.6,1.94) ellipse (.045 and .10);
+\draw[ober] (3.5,3.05)--(4.32,3.05)
+ .. controls (4.42,2.65) and (4.28,1.18) .. (5.1,.95)
+ .. controls (5.7,.80) and (5.98,.12) .. (6.65,.12)
+ .. controls (7.55,.05) and (7.95,1.17) .. (7.48,1.62)
+ .. controls (7.13,1.94) and (5.0,1.87) .. (4.65,1.94)--(4.88,4.28);
+% Große Unterfadenspule; die Greiferspitze erfasst ausschließlich die blaue Schlinge.
+% Der graue Kreispfeil bezeichnet die Umlaufbewegung um Spule und Spulenkapsel.
+\path[draw=black!65,fill=black!6,line width=.8pt] (6.85,.95) circle (.63);
+\draw[black!45,line width=.65pt] (6.85,.95) circle (.19);
+\draw[unter,line width=.8pt] (6.85,.95) circle (.40);
+\draw[unter,line width=.8pt] (6.85,.95) circle (.49);
+\draw[unter] (3.5,2.05) .. controls (4.0,2.05) and (4.65,1.15) .. (5.35,1.15)
+ .. controls (5.75,1.15) and (6.12,1.12) .. (6.36,1.0);
+% Kleine Greiferspitze direkt an der Oberfadenschlinge, deutlich getrennt vom Unterfaden.
+\path[draw=black!75,fill=black!45,line width=.7pt] (7.48,1.62)--(7.76,1.51)--(7.59,1.80)--cycle;
+\draw[-{Stealth},black!55,densely dashed,line width=.75pt]
+ (7.759,1.475) arc[start angle=30,end angle=-150,radius=1.05];
+\draw[-{Stealth},black!65] (4.15,3.5)--(4.15,4.18);
+\node[beschriftung] at (5.1,4.0){Nadel}; \draw[black!45] (5.0,3.92)--(4.73,3.8);
+\node[font=\scriptsize,anchor=west] at (7.8,1.87){Greiferspitze};
+\draw[black!45] (7.78,1.82)--(7.62,1.75);
+\node[font=\scriptsize] at (6.85,-.28){Unterfadenspule};
+\node[beschriftung,text=fablab] at (0,.6){Oberfadenschlinge}; \draw[fablab!70] (3.55,.66)--(4.53,.95);
+% Fertige Naht mit identifizierbaren Ober- und Unterfäden.
+\node[beschriftung,font=\small\bfseries] at (0,-.65){Richtig: Verschlingung im Stoff};
+\path[draw=black!40,fill=black!6] (0,-1.75) rectangle (9,-1.25);
+\path[draw=black!40,fill=black!12] (0,-2.25) rectangle (9,-1.75);
+\foreach \x in {.7,1.8,2.9,4.0,5.1,6.2,7.3,8.4}{
+ \draw[ober] (\x-.55,-1.25)--(\x-.14,-1.25) .. controls (\x-.02,-1.25) and (\x-.16,-1.83) .. (\x,-1.83)
+ .. controls (\x+.17,-1.83) and (\x+.02,-1.25) .. (\x+.16,-1.25)--(\x+.55,-1.25);
+ \draw[unter] (\x-.55,-2.25)--(\x-.15,-2.25) .. controls (\x,-2.25) and (\x-.16,-1.68) .. (\x,-1.68)
+ .. controls (\x+.16,-1.68) and (\x,-2.25) .. (\x+.15,-2.25)--(\x+.55,-2.25);
+}
+% Zu hohe Oberfadenspannung: Unterfaden wird auf die Oberseite gezogen.
+\node[beschriftung,font=\small\bfseries] at (0,-2.9){Zu hoch: Unterfaden auf der Stoffoberseite};
+\path[draw=black!40,fill=black!6] (0,-4.0) rectangle (9,-3.5);
+\path[draw=black!40,fill=black!12] (0,-4.5) rectangle (9,-4.0);
+\draw[ober] (.15,-3.5)--(8.95,-3.5);
+\foreach \x in {.7,1.8,2.9,4.0,5.1,6.2,7.3,8.4}{
+ \draw[unter] (\x-.55,-4.5)--(\x-.15,-4.5)
+ .. controls (\x,-4.5) and (\x-.16,-3.42) .. (\x,-3.42)
+ .. controls (\x+.16,-3.42) and (\x,-4.5) .. (\x+.15,-4.5)--(\x+.55,-4.5);
+}
+% Zu geringe Oberfadenspannung: Oberfaden wird auf die Unterseite gezogen.
+\node[beschriftung,font=\small\bfseries] at (0,-5.15){Zu gering: Oberfaden auf der Stoffunterseite};
+\path[draw=black!40,fill=black!6] (0,-6.25) rectangle (9,-5.75);
+\path[draw=black!40,fill=black!12] (0,-6.75) rectangle (9,-6.25);
+\draw[unter] (.15,-6.75)--(8.95,-6.75);
+\foreach \x in {.7,1.8,2.9,4.0,5.1,6.2,7.3,8.4}{
+ \draw[ober] (\x-.55,-5.75)--(\x-.14,-5.75)
+ .. controls (\x-.02,-5.75) and (\x-.16,-6.83) .. (\x,-6.83)
+ .. controls (\x+.17,-6.83) and (\x+.02,-5.75) .. (\x+.16,-5.75)--(\x+.55,-5.75);
+}
+\draw[ober] (.2,-7.4)--(.8,-7.4); \node[beschriftung] at (1,-7.4){Oberfaden};
+\draw[unter] (4.3,-7.4)--(4.9,-7.4); \node[beschriftung] at (5.1,-7.4){Unterfaden};
+\end{tikzpicture}

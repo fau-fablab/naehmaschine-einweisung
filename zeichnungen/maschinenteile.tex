@@ -1,0 +1,63 @@
+% Schematische Beispielzeichnung, keine maßstäbliche Ansicht der Pfaff 260.
+% Inhaltlich nach der bisherigen gemeinfreien Übersicht Sewingmachine1.jpg.
+\begin{tikzpicture}[x=1cm,y=1cm,line cap=round,line join=round,
+  teil/.style={draw=fablab,line width=.8pt,fill=fablab!6},
+  mechanik/.style={draw=black!65,line width=.9pt},
+  marke/.style={circle,draw=fablab,fill=white,text=fablab,font=\sffamily\bfseries\small,inner sep=2pt,minimum size=5mm},
+  zeiger/.style={draw=fablab!70,line width=.6pt},
+  legende/.style={font=\small,anchor=west}]
+% Grundplatte und offenes Gehäuse.
+\path[teil] (2.1,1.35) -- (10.8,1.35) -- (11.25,1.05) -- (11.25,.6) -- (2.1,.6) -- cycle;
+\path[teil] (2.75,2.1) -- (2.75,5.8) .. controls (2.75,6.35) and (3.4,6.4) .. (3.85,6.1)
+ -- (9.5,6.1) .. controls (10.1,6.1) and (10.25,5.65) .. (10.25,5.2)
+ -- (10.25,1.35) -- (8.9,1.35) -- (8.9,4.7)
+ .. controls (8.9,5.0) and (8.7,5.05) .. (8.45,5.05)
+ -- (4.5,5.05) .. controls (4.1,5.05) and (4.05,4.65) .. (4.05,4.4)
+ -- (4.05,2.1) -- cycle;
+% Antrieb und Wellen: durch das schematisch geöffnete Gehäuse sichtbar.
+\draw[mechanik] (3.45,5.55) -- (10.75,5.55);
+\draw[mechanik] (9.35,5.6) -- (9.35,1.65);
+\draw[mechanik] (3.4,1.05) -- (9.35,1.05) -- (9.35,1.65);
+\draw[mechanik] (3.4,5.8) -- (3.4,2.25);
+\path[teil] (10.6,5.55) ellipse (.42 and 1.0);
+\draw[mechanik] (10.6,5.55) ellipse (.22 and .73);
+\draw[mechanik] (8.3,6.1) -- (8.3,6.9);
+\path[teil] (8.04,6.15) rectangle (8.56,6.6);
+\foreach \y in {6.22,6.32,6.42,6.52}{\draw[black!35] (8.04,\y)--(8.56,\y);}
+% Nähfußheber, Spannungsscheiben, Nadelhalter und Nadel.
+\draw[mechanik,line width=2pt] (2.9,3.6)--(2.55,4.4)--(2.35,4.6);
+\path[teil] (3.98,3.5) circle (.32);
+\draw[mechanik] (3.98,3.5) circle (.21);
+\draw[mechanik] (3.98,3.5) circle (.09);
+\path[teil] (3.26,2.55) rectangle (3.57,2.85);
+\draw[mechanik,line width=1.2pt] (3.41,2.55)--(3.41,1.54);
+\draw[mechanik] (3.31,1.7)--(3.51,1.7);
+\draw[mechanik,line width=2pt] (3.05,2.2)--(3.05,1.6)--(3.6,1.6);
+\path[teil] (2.94,1.46) rectangle (3.7,1.6);
+% Stichplatte und Transporteur, darunter Greifer mit Spulenkapsel.
+\path[teil] (2.85,1.35) rectangle (4.3,1.46);
+\foreach \x in {3.82,3.94,4.06}{\draw[mechanik] (\x,1.4)--(\x,1.57);}
+\path[teil] (3.4,1.03) circle (.28);
+\draw[mechanik] (3.4,1.03) circle (.16);
+\draw[mechanik,line width=1.6pt] (3.25,.88) arc[start angle=225,end angle=470,radius=.22];
+% Nummerierte Zeiger: bewusst außerhalb der dicht liegenden Bauteile.
+\draw[zeiger] (7.85,7.2)--(8.3,6.75); \node[marke] at (7.7,7.3){1};
+\draw[zeiger] (11.7,6.25)--(10.99,5.8); \node[marke] at (11.85,6.35){2};
+\draw[zeiger] (1.75,4.85)--(2.48,4.4); \node[marke] at (1.55,4.95){3};
+\draw[zeiger] (4.9,3.7)--(4.23,3.57); \node[marke] at (5.1,3.74){4};
+\draw[zeiger] (1.8,2.9)--(3.25,2.72); \node[marke] at (1.6,2.93){5};
+\draw[zeiger] (4.65,2.3)--(3.44,2.12); \node[marke] at (4.85,2.33){6};
+\draw[zeiger] (1.6,1.85)--(2.95,1.56); \node[marke] at (1.4,1.9){7};
+\draw[zeiger] (5.2,1.85)--(4.01,1.51); \node[marke] at (5.4,1.9){8};
+\draw[zeiger] (2.35,.16)--(2.91,1.36); \node[marke] at (2.25,-.04){9};
+\draw[zeiger] (3.6,.04)--(3.42,.86); \node[marke] at (3.62,-.16){10};
+\draw[zeiger] (4.65,.08)--(3.65,.97); \node[marke] at (4.84,-.03){11};
+\draw[zeiger] (9.5,0)--(9.5,.7); \node[marke] at (9.5,-.2){12};
+% Legende in drei gut lesbaren Spalten.
+\foreach \n/\text/\x/\y in {
+ 1/Garnspulenhalter/0/-1.2,2/Handrad/0/-2.05,3/Nähfußheber/0/-2.9,4/Oberfadenspannung/0/-3.75,
+ 5/Nadelhalter/4.6/-1.2,6/Nadel/4.6/-2.05,7/Nähfuß/4.6/-2.9,8/Transporteur/4.6/-3.75,
+ 9/Stichplatte/8.6/-1.2,10/Spulenkapsel/8.6/-2.05,11/Greifer/8.6/-2.9,12/Anschiebetisch/8.6/-3.75}{
+ \node[marke,inner sep=0pt,minimum size=7mm] at (\x,\y){\n}; \node[legende] at (\x+.5,\y){\text};
+}
+\end{tikzpicture}

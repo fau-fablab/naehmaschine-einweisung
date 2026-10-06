@@ -3,7 +3,7 @@
 % CC-BY-SA 3.0
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\basedir}{./fablab-document/}
+\newcommand{\basedir}{fablab-document}
 \documentclass{\basedir/fablab-document}
 \renewcommand{\texteuro}{\euro}
 \usepackage{ifthen}
@@ -13,8 +13,11 @@
 
 \usepackage{tabularx} % Tabelle mit teilweise gleich großen Spalten
 \title{Einweisungsliste Nähmaschine Pfaff 260}
-\fancyfoot[C]{\hspace{7em} \small https://github.com/fau-fablab/naehmaschine-einweisung}
+\fancyfoot[C]{\small github.com/fau-fablab/naehmaschine-einweisung}
 \fancyfoot[L]{Einweisungsliste Nr. \underline{\hspace{3em}}}
+
+\InputIfFileExists{version}{}{\newcommand{\Version}{Entwurf \today}}
+\fancyfoot[R]{Version \Version}
 
 \author{Martin u.a.} % basiert auf Stickmaschinen-Einweisung von Martin
 
@@ -35,6 +38,7 @@ Die Einweisung gilt für ein Jahr und muss dann aufgefrischt werden. % (Das ist 
 
 \newcommand{\leerezeile}{\hspace{2em} \tabularnewcol \hspace{3em} \tabularnewcol \hspace{2.5em} \tabularnewcol \hspace{2.5em} \tabularnewcol \vbox{\vspace{2em}} \tabularnewcol \tabularnewcol \tabularnewcol \tabularnewline \hline}
 
+{\small
 \begin{tabularx}{\textwidth}{|l|l|l|l|X|X|X|X|}
   \hline
   \textbf{Nr.} & \textbf{Datum} & \textbf{von} & \textbf{bis} & \textbf{Name} & \textbf{Unterschrift} & \textbf{Einweisende:r} & \textbf{Unterschrift} \\ \hline
@@ -44,5 +48,6 @@ Die Einweisung gilt für ein Jahr und muss dann aufgefrischt werden. % (Das ist 
   }%
   \leerezeile % doofer Workaround, eigentlich sollte das auch in der Forschleife gehen! Ohne dies wird die Spaltenbegrenzung von Spalte 1 zu weit gezeichnet.
 \end{tabularx}
+}
 
 \end{document}

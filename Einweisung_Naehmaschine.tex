@@ -7,189 +7,100 @@
 \newcommand{\basedir}{fablab-document}
 \documentclass{\basedir/fablab-document}
 
+\usetikzlibrary{arrows.meta}
+\usepackage{xurl}
+\usepackage{qrcode}
+
 \renewcommand{\texteuro}{\euro}
 
 \renewcommand{\todo}[1]{\textbf{\color{red}{TODO: #1}}}
 \newcommand{\pfeil}{\ensuremath{\rightarrow}}
 
-\date{2020}
-\author{}
+\date{\today}
+\InputIfFileExists{version}{}{\newcommand{\Version}{Entwurf \today}}
+\fancyfoot[R]{Version \Version}
+\author{kontakt@fablab.fau.de}
 \fancyfoot[L]{kontakt@fablab.fau.de}
 \title{Einweisung Nähmaschine Pfaff 260}
 
 
 \begin{document}
 \maketitle
+\begin{center}
+{\small Version \Version}
+\end{center}
 
-\section{Grundlagen}
+\section{Regeln und Sicherheit}
+\begin{itemize}
+ \item \textbf{Die Maschine ist nach dem Einstecken sofort nähbereit.} Der Schalter rechts schaltet nur das Nählicht; zum Ausschalten den Netzstecker ziehen.
+ \item \textbf{Finger von der Nadel fernhalten.} Beim Hantieren im Nähbereich den Fuß vom Anlasser nehmen. Die Maschine näht schneller, als du im Notfall reagieren kannst.
+ \item Nur mit einer geraden, unbeschädigten Nadel und einer intakten Stichplatte nähen. Eine verbogene oder anschlagende Nadel kann brechen und die Maschine beschädigen.
+ \item Den Stoff vom Transporteur bewegen lassen: nur führen, niemals ziehen oder schieben. Sonst kann sich die Nadel verbiegen oder brechen.
+ \item Nur mit abgesenktem Nähfuß nähen. Andernfalls können Fadensalat, Nadelbruch und Schäden am Stoff entstehen.
+ \item Bei ungewöhnlichen Geräuschen, Gerüchen, Vibrationen oder Nadelbewegungen aufhören und eine:n Betreuer:in informieren. Nichts mit Gewalt bewegen oder verstellen.
+ \item \textbf{Den Metallbügel hinten unten am Holzkasten bei jeder Benutzung ausklappen,} damit der Kasten nicht nach hinten kippt.
+ \item Die Maschine ist nicht fest im unteren Holzkasten befestigt. Beim Kippen (z.\,B. beim Unterfadenwechsel) kann sie trotz ausgeklapptem Bügel herausfallen oder umkippen. Maschine vorsichtig kippen und dabei festhalten.
+ \item \textbf{Vor dem Wechseln der Glühbirne den Netzstecker ziehen.} Das Nählicht arbeitet mit 230\,V; bei eingesteckter Maschine besteht Lebensgefahr durch elektrischen Schlag. Nählicht und Fußanlasser können warm werden.
+\end{itemize}
 
-\subsection{Vor dem Nähen}
+\clearpage
+\renewcommand{\contentsname}{Inhaltsverzeichnis / Arbeitsablauf}
+\setcounter{tocdepth}{2}
+\tableofcontents
+\clearpage
+\section{Arbeitsplatz und Maschine vorbereiten}
+\subsection{Aufstellen, ölen und anschließen}
 \begin{itemize}
 	\item Nähmaschine auf einen stabilen Tisch stellen, sodass sie \textbf{nicht wackelt}
 	\item Haube abnehmen, indem du die seitlichen Schnallen an der Basis der Nähmaschine löst und die Haube nach oben abziehst
-	\item Einen \textbf{kleinen(!)} Tropfen Nähmaschinen- bzw. Feinmechaniköl an der richtigen Stelle auf den Umlaufgreifer geben. (Siehe Anleitung Seite 25, Foto rechts oben). Überschüssiges Öl sofort abwischen.
-	\item \textbf{ACHTUNG: Die Nähmaschine ist sofort nähbereit, nachdem sie an den Strom angesteckt wurde. Der Schalter auf der rechten Seite schaltet lediglich das Nählicht ein und aus.}
+	\item Den Metallbügel hinten unten am Holzkasten vollständig ausklappen, damit der Kasten nicht nach hinten kippt.
+	\item Einen \textbf{kleinen(!)} Tropfen Nähmaschinen- bzw. Feinmechaniköl an der richtigen Stelle auf den Umlaufgreifer geben. (Die genaue Ölstelle ist in der passenden Gebrauchsanleitung auf der Dateifreigabe bebildert; siehe Abschnitt~\ref{sec:handbuch}.) Überschüssiges Öl sofort abwischen.
 	\item Netzkabel mit Fußanlasser anschließen, indem du es \textbf{zuerst(!)} mit der Nähmaschine verbindest und \textbf{danach(!)} in eine Steckdose steckst.
 \end{itemize}
 
-\subsection{Nach dem Nähen}
-\begin{itemize}
-	\item Nähmaschine ausschalten, indem du das Netzkabel \textbf{zuerst(!)} aus der Steckdose ziehst und \textbf{danach(!)} von der Maschine trennst
-	\item Fußanlasser aufräumen
-	\item Stoffstück unter Nähfuß legen und diesen dann absenken
-	\item Transporthaube auf Maschine setzen und mit den seitlichen Schnallen an der Basis der Nähmaschine befestigen
-	\item Nähmaschine aufräumen
-	\item Sonstiges Zubehör, Garn, usw. wieder an seinen Platz verräumen
-	\item Garn- und Stoffreste und Fusseln, die beim Nähen und Schneiden von Textilien auf dem Tisch entstehen, wegfegen und in einen Mülleimer werfen. Danach alles, was auf den Boden gefallen ist, aufsaugen.
-	\item Bezahlen: Die Preise für Stoff und manche andere Materialien, sowie für die Nutzung der Maschine findest du im Kassenterminal unter \enquote{Textilbearbeitung}. Die Benutzung der Maschine (inkl. Faden) ist für Privatpersonen gegen Spende, für Lehrstühle und Unternehmen gibt es einen Preis pro Stunde. Bitte beachte, dass Reparaturen teuer werden können und wir dafür auf deine Spende angewiesen sind.
-\end{itemize}
 
-\pagebreak
+\subsection{Nadel und Einstellungen prüfen}
+Wähle eine zum Material passende Nadelstärke und einen passenden Nadeltyp
+(üblicherweise Stärke 60 bis 110, z.\,B. Universal-, Stretch- oder Jeansnadel).
+Nadeltypen und Wechsel sind in Abschnitt~\ref{sec:naehbereit} beschrieben.
+Verändere die Unterfadenspannung niemals ohne Rücksprache mit einem Betreuer;
+die Oberfadenspannung darfst du an dein Material anpassen.
 
-\subsection{Regeln und Hinweise}
-\begin{itemize}
-	\item Achte immer darauf, wo sich deine Finger befinden. Die Maschine näht viel schneller, als du im Notfall reagieren kannst. Nimm beim Hantieren im Nähbereich immer den Fuß vom Anlasser. Achte beim Nähen darauf, immer genug Abstand zwischen der Nadel und deinen Händen zu halten.
-	\item Für jede Näharbeit solltest du immer eine richtige und einwandfreie, nicht verbogene Nadel verwenden. Bei der Verwendung einer verbogenen Nadel kann diese auf die Stichplatte treffen und dadurch die Mechanik der Maschine stark beschädigt werden.
-	\item Den Stoff niemals schieben oder ziehen. Den Transport des Stoffes erledigt der sog. Transporteur für dich. Du musst lediglich den Stoff um die Nadel herum drehen, um die Richtung vorzugeben. Solltest du dennoch am Stoff ziehen oder ihn schieben, kann sich die Nadel mit den oben genannten Folgen verbiegen.
-	\item Nähe nie bei beschädigter Stichplatte, sonst kann sich die Nadel verbiegen/brechen (s.o.).
-	\item Bevor du losnähst, achte immer darauf, dass der Nähfuß abgesenkt ist. Der Nähfuß lässt sich mit dem Nähfußheber an der Rückseite der Maschine heben und senken. Solltet ihr bei angehobenem Nähfuß losnähen, werdet ihr Fadensalat produzieren, der u.U. nur sehr aufwändig wieder entfernt werden kann.
-	\item Nichts mit Gewalt verschieben, einsetzen, bewegen, verstellen! Die Mechanik ist bei korrekter Handhabung und Behandlung leichtgängig.
-	\item Verschiedene Materialien erfordern die Verwendung verschiedener Nadelstärken (üblicherweise zwischen 60 und 110) und Nadeltypen (z.B. Stretch-, Jeans-,  Universalnadel, etc.)
-	\item Ohne Rücksprache mit einem Betreuer darf niemals die Unterfadenspannung verändert werden.
-	\item Achte beim Nähen immer darauf, wie sich die Maschine verhält. Geräusche, Gerüche, Nadelbewegung oder Vibrationen, die dir bisher unbekannt waren, können auf Beschädigungen an der Maschine oder eine Fehlbedienung hinweisen. Bitte informiere immer eine:n Betreuer:in, wenn dir etwas komisch vorkommt.
-	\item Das Nählicht der Maschine wird mit Netzspannung (230V) betrieben. Die Glühbirne darf daher niemals bei in die Steckdose eingesteckter Maschine gewechselt werden. Andernfalls droht Lebensgefahr durch einen elektrischen Schlag.
-	\item Das Nählicht und der Fußschalter können warm werden.
-	\item Die Nähmaschine ist nicht fest im unteren Holzkasten befestigt. Beim Kippen (z.\,B. beim Unterfaden wechseln) kann sie \enquote{herausfallen}.
-	\item Damit der Holzkasten nicht nach hinten kippt, muss der Metallbügel ganz unten hinten am Holzkasten ausgeklappt werden.
-\end{itemize}
+\subsection{Herstelleranleitung}\label{sec:handbuch}
+Die genau passende Gebrauchsanleitung für unsere Pfaff 260 liegt als PDF
+auf der Dateifreigabe im Ordner:\\[1mm]
+\texttt{Z:/1\_fablab/1\_Geraete/}\allowbreak\texttt{Nähmaschine/}
 
-\pagebreak
+Verwende für Teileübersicht und bebilderte Arbeitsschritte diese Anleitung.
+Eine Papier-Anleitung liegt bei der Maschine; sie beschreibt ein komplizierteres
+Modell und stimmt daher in einzelnen Details nicht überein.
 
-\subsection{Fragen/Vorführung Einweisung}
-Folgende Dinge musst du für eine erfolgreiche Einweisung vorführen bzw. beantworten können:
-\begin{itemize}
-	\item Dinge, die du vorführen können solltest:
-	\begin{itemize}
-		\item Aufbauen, Überprüfen, Einschalten der Maschine
-		\item Ölen des Umlaufgreifers
-		\item Einsetzen der Nadel
-		\item Spulen des Fadens auf die Unterfadenspule
-		\item Einsetzen der Unterfadenspule in die Spulenkapsel
-		\item Einfädeln des Oberfadens
-		\item Wechseln des Nähfußes
-		\item Heraufholen des Unterfadens
-		\item Anpassen der Oberfadenspannung
-		\item Umschalten zwischen Zickzack und Geradstich
-		\item Einstellen der Stichlänge, Stichbreite
-		\item Rückwärtsnähen
-		\item Versenken/Anheben des Transporteurs
-		\item Nählicht ein- und ausschalten
-		\item Abbauen der Maschine
-		\item Zustand, in dem du deinen Arbeitsplatz hinterlassen wirst
-		\item Bezahlen
-	\end{itemize}
-	
-	\item Fragen, die du beantworten können solltest:
-	\begin{itemize}
-		\item Welcher ist der Standard-Nähfuß?
-		\item Wo finde ich Nähfußhebel und Einfädlerhebel?
-		\item Warum ist es wichtig, immer mit abgesenktem Nähfuß zu nähen?
-		\item Wo wird die Unterfadenspule eingesetzt?
-		\item Warum sollte man, wann immer möglich, den Transporteur den Stoff durch die Maschine ziehen lassen und das Material lediglich nach links und rechts dirigieren? Was kann passieren, wenn man dennoch am Stoff zieht bzw. diesen schiebt?
-		\item Wo ist der Transporteur, was tut dieser und wo ist der Schalter zum Versenken des Transporteurs?
-	\end{itemize}
-\end{itemize}
+\noindent
+\begin{minipage}[c]{0.16\linewidth}
+\centering
+\qrcode[height=25mm]{https://www.libble.de/pfaff-260/p/562851/}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.80\linewidth}
+\textbf{Ersatzlink, falls die Dateifreigabe nicht erreichbar ist}\\[1mm]
+Die Archivkopie bei Libble ist schlechter gescannt und beschreibt ein
+Modell mit zusätzlichen Einstellungen. Abbildungen und Seitenzahlen können
+von der passenden Anleitung abweichen.\\[1mm]
+\url{https://www.libble.de/pfaff-260/p/562851/}
+\end{minipage}
 
-\pagebreak
-\section{Bedienelemente und Nähen}
-
+\clearpage
 \subsection{Teile der Maschine und Zubehör}
-Eine Abbildung mit der Benennung aller Teile unserer Maschine findest du u.a. auch in der Gebrauchsanleitung.
-
-Eine genau passende Gebrauchsanleitung als PDF liegt auf der Dateifreigabe unter \verb|Z:/1_fablab/1_Geraete/Nähmaschine/|.
-
-Eine Anleitung auf Papier findest du bei der Maschine. Dort passen ein paar Kleinigkeiten nicht genau, weil die Anleitung für ein komplizierteres Modell ist.
+Die vollständige Teileübersicht findest du in der passenden Gebrauchsanleitung auf der Dateifreigabe; siehe Abschnitt~\ref{sec:handbuch}.
 
 
 Die wichtigsten Teile einer Nähmaschine (Beispielzeichnung) sind:
 \begin{center}
-	\includegraphics[width=0.8\linewidth]{naehmaschine_wichtige_teile.jpg}
-	(abgeändert von \url{https://commons.wikimedia.org/wiki/File:Sewingmachine1.jpg} / public domain)
+	\resizebox{0.95\linewidth}{!}{\input{zeichnungen/maschinenteile}}
+	\par{\small \textbf{Abb. 1:} Die nummerierten Bauteile zeigen den grundlegenden Aufbau einer Nähmaschine. Ihre genaue Form und Anordnung können bei der Pfaff 260 von dieser Beispielzeichnung abweichen.}
 \end{center}
-
-\subsection{Nähfuß anheben und absenken}
-Der Nähfuß kann mit dem Hebel an der Rückseite, links an der Maschine in zwei Positionen gebracht werden:
-\begin{itemize}
-	\item \textbf{abgesenkt:} Nähfußhebel ist unten, Position zum Nähen
-	\item \textbf{angehoben:} Nähfußhebel ist oben, Position zum Einlegen und Entnehmen von Stoff und zum Einfädeln des Fadens
-\end{itemize}
-
-\textcolor{red}{
-	\textbf{Wichtig:} Immer erst losnähen, wenn der Nähfuß abgesenkt ist. Wenn der Nähfuß noch oben ist, sind die Spannungsscheiben für den Oberfaden nicht angezogen. 
-	Dadurch wird dieser viel zu weit nach unten durchgezogen. Es bildet sich ein Fadenwulst, der Stoff wird nicht mehr ordentlich transportiert und irgendwann wird auch die Nadel abbrechen. Danach wird es notwendig sein, einen großen Fadenklumpen aus dem Umlaufgreifer zu entfernen. 
-	Außerdem ist die Wahrscheinlichkeit groß, dass der Stoff dabei an der Stelle, an der sich die Maschine \enquote{festgefressen} hat, ein Loch haben wird.
-}
-
-\subsection{Stichlänge einstellen}
-Mit dem unteren Einstellrad auf der rechten Seite der Nähmaschine lässt sich die Stichlänge einstellen. Die Skala gibt dabei die ungefähre Stichlänge in Millimetern an.
-
-\subsection{Rückwärts nähen}
-Wenn der Hebel in der Mitte des Stichlängen-Einstellrads heruntergedrückt wird, näht die Maschine rückwärts. Das ist z.B. zum Vernähen einer Naht sehr nützlich (s.u.).
-Sobald der Hebel losgelassen wird, näht die Maschine wieder vorwärts.
-
-Du kannst auch das Einstellrad auf \enquote{weniger als null} einstellen, dann näht die Maschine dauerhaft mit kurzer Stichlänge rückwärts.
-
-\subsection{Fadenspannung einstellen}
-Die Einstellung der Oberfadenspannung erfolgt durch Drehen am Einstellrad auf der linken Seite der Nähmaschine.
-Die Fadenspannung sollte stets so eingestellt sein, dass sich die Kreuzungspunkte des Ober- und des Unterfadens im zu nähenden Material befinden:
-\begin{center}
-	\includegraphics[width=\linewidth/2]{seam.jpg}
-	\url{https://de.wikipedia.org/wiki/Datei:N%C3%A4hmaschine-Fig15und16.jpg},
-	Lizenz: gemeinfrei
-\end{center}
-Prinzipiell näht die Maschine mit der Oberfadenspannung in Mittelstellung (\enquote{5}) üblicherweise sehr gut.
-Manche Stoffe, Garne oder Nähtechniken machen es allerdings notwendig, diese anzupassen.
-Idealerweise probiert man daher vorher an einem Stück übrigem Reststoff, ob sich Unter- und Oberfaden im \enquote{Inneren} des Stoffes treffen oder ob einer der Fäden fälschlicherweise auf die andere Seite durchgezogen wird.
-\newline
-\pfeil Die Oberfadenspannung dürft ihr jederzeit euren Bedürfnissen anpassen. Bei einer gut funktionierenden Maschine sollte dies auch stets ausreichend sein. 
-\newline
-\textcolor{red}{\textbf{Solltet ihr dennoch das Gefühl haben, dass die Unterfadenspannung nicht korrekt eingestellt ist, korrigiert diese bitte NIEMALS selbst, sondern informiert die anwesenden Betreuer:innen.}}
-
-\subsection{Zickzack einstellen}
-Neben dem normalen Geradstich beherrscht unsere Pfaff 260 auch noch den Zickzackstich. 
-Zwar haben modernere Maschinen noch viele andere nützliche Stichprogramme, jedoch lassen sich mit dem nötigen Wissen schon mit diesen beiden Grundstichen quasi alle Näharbeiten erledigen. Falls du Hilfe brauchen solltest, frag einfach nach. Vielleicht kann dir jemand die entsprechenden Arbeitstechniken zeigen.  
-\begin{itemize}
-	\item Das obere Einstellrad an der rechten Seite der Maschine dient zur Einstellung der Breite eines permanenten Zickzackstiches. Die Skala auf dem Rad gibt die ungefähre Breite des Zickzacks in Millimetern an.
-	\item Der Hebel in der Mitte des Einstellrades ermöglicht es, nur momentan einen Zickzackstich zu nähen.
-	Sobald der Hebel wieder losgelassen wird, wird die Maschine wieder zum Geradstich übergehen. 
-	Je weiter der Hebel heruntergedrückt wird, desto breiter wird der Zickzackstich.
-\end{itemize}
-
-\subsection{Nadelposition einstellen}
-Mit dem kleinen weißen Hebel unten am Zickzack-Einstellrad lässt sich die Nadelposition nach links oder rechts verstellen.
-Für viele Näharbeiten ist es jedoch ausreichend, die Nadel in der Mittelposition zu belassen.
-Orientiert euch am besten an der Mitte des Nähfußes, um die Nadelposition wieder in Mittelstellung zu bringen.
-
-\subsection{Nählicht ein- und ausschalten}
-Mit dem Knopf auf der rechten Seite unter dem Rückwärtshebel lässt sich das integrierte Nählicht ein- und wieder ausschalten.
-
-\subsection{Transporteur anheben/versenken}
-Der Transporteur ist dafür zuständig, den Stoff beim Nähen automatisch weiterzuschieben. 
-\newline Beim Freihandnähen, Stopfen, Sticken und Annähen von Knöpfen muss dieser versenkt werden:
-\begin{itemize}
-	\item Den Hebel an der Grundplatte auf der rechten Seite der Nähmaschine nach vorne, auf dich zu drehen, um den Transporteur zu versenken
-	\item Den Hebel wieder nach hinten, von dir weg drehen, um den Transporteur anzuheben
-\end{itemize}
-
-\subsection{Sonstiges}
-\textbf{Vernähen:} 
-\newline
-Der Anfang und das Ende einer Naht sollten vernäht werden, damit sich diese nicht wieder von den Enden her aufdröseln kann.
-Üblicherweise bewerkstelligt man das mit einer Nähmaschine, indem man unter Zuhilfenahme der Rückwärtstaste zwei- bis dreimal, 5-10mm lang auf der gleichen Stelle vor und zurück näht.
-Falls die Stelle besonders gut versteckt werden soll, kann man am Anfang und am Ende einer Naht auch ausreichend viel Faden herunterhängen lassen und die Enden anschließend mit der Hand vernähen.
 
 \pagebreak
-\section{Maschine nähbereit machen und wichtiges sonstiges Wissen}
+\section{Nadel, Nähfuß und Fäden vorbereiten}\label{sec:naehbereit}
 
 \subsection{Den richtigen Nadeltyp wählen}
 \textcolor{red}{Wichtig: Unbedingt einwandfreie Nadeln verwenden: gute Qualität, gerade, nicht verbogen oder abgebrochen, schlägt nicht an, usw.!}
@@ -198,14 +109,14 @@ Zudem muss es sich stets um Flachkolbennadeln (Art 130/705H) handeln.
 
 
 Viele Näharbeiten können mit einer sogenannten Universalnadel durchgeführt werden. Für manche Stoffe und Nahtarten benötigt man jedoch spezielle Nadeltypen.
-So gibt es z.B. Stretch- u. Jerseynadeln (rundere Spitze, um den feineren Stoff nicht zu zerstechen), Jeansnadeln, Microtexnadeln, Zwillingsnadeln, usw. 
+So gibt es z.B. Stretch- u. Jerseynadeln (rundere Spitze, um den feineren Stoff nicht zu zerstechen), Jeansnadeln, Microtexnadeln, Zwillingsnadeln, usw.
 \newline
 
 
 Unten seht ihr eine unvollständige Liste verschiedener Nadeltypen:
 \begin{center}
-	\includegraphics[width=\linewidth/2]{Sewing-machine-needles-types.jpg}
-	\url{https://de.wikipedia.org/wiki/Datei:Sewing-machine-needles-types.jpg}, Lizenz: public domain
+	\resizebox{0.88\linewidth}{!}{\input{zeichnungen/nadeltypen}}
+	\par{\small \textbf{Abb. 2:} Links ist der Aufbau einer Nähmaschinennadel zu sehen, rechts eine Auswahl unterschiedlicher Nadeltypen. Die Spitzen sind zur besseren Unterscheidung vergrößert dargestellt.}
 \end{center}
 
 \subsection{Nadeln wechseln}
@@ -220,7 +131,7 @@ Unten seht ihr eine unvollständige Liste verschiedener Nadeltypen:
 \end{enumerate}
 
 \subsection{Nähfuß wechseln}
-Es gibt verschiedene Nähfüße, je nach Einsatzzweck können diese ausgewechselt werden. Es gibt z.B. Stopffüße, Stickfüße, Bandeinfasser, Freihandfüße, Teflonfüße usw. 
+Es gibt verschiedene Nähfüße, je nach Einsatzzweck können diese ausgewechselt werden. Es gibt z.B. Stopffüße, Stickfüße, Bandeinfasser, Freihandfüße, Teflonfüße usw.
 
 \begin{enumerate}
 	\item Die Nadel mit dem Handrad in höchste Stellung bringen
@@ -241,7 +152,7 @@ Video: \url{https://youtu.be/UhKprvfHtvI?t=368} von 6:08 bis 9:12. (Beachte: Im 
 	\item Fadenhebel mit Handrad in höchste Position bringen
 	\item Garnrolle auf Garnrollenhalter stecken
 	\item Faden durch Führung über dem Oberfadenspannungs-Einstellrad durch eines der Löcher führen. (Oder, wie im Video und der PDF-Anleitung gezeigt, erst durch das obere und dann durch das untere.)
-	\item Einmal um das Spannungsrad in einer der beiden Führungen herumführen und nach rechts ziehen, damit der Faden unter und hinter den Führungsdorn an der Oberseite des Spannungsrades rutscht 
+	\item Einmal um das Spannungsrad in einer der beiden Führungen herumführen und nach rechts ziehen, damit der Faden unter und hinter den Führungsdorn an der Oberseite des Spannungsrades rutscht
 	\item Garn durch eines der Löcher im Fadenhebel führen
 	\item Durch die beiden Führungsösen Richtung Nadel führen (Garn kann von der linken Seite in die Führungsösen gezogen werden)
 	\item Faden in die Öse der Nadel einfädeln (manuell oder mit dem Nadeleinfädler)
@@ -259,7 +170,7 @@ Video: \url{https://youtu.be/UhKprvfHtvI?t=368} von 6:08 bis 9:12. (Beachte: Im 
 \end{enumerate}
 Falls sich der Faden sowohl mit abgesenktem wie auch mit angehobenem Nähfuß jeweils beide Male leicht oder schwer wegziehen lässt, ist der Faden nicht richtig eingefädelt.
 \newline
-\textcolor{red}{\pfeil In diesem Fall bitte den Faden noch einmal komplett herausziehen und neu einfädeln.} 
+\textcolor{red}{\pfeil In diesem Fall bitte den Faden noch einmal komplett herausziehen und neu einfädeln.}
 
 \subsection{Unterfaden aufspulen}
 Obwohl man den Unterfaden idealerweise nicht an der Oberseite eines Nähstücks sehen wird, verwendet man dafür üblicherweise das gleiche Garn wie für den Oberfaden.
@@ -292,7 +203,7 @@ Video: \url{https://youtu.be/UhKprvfHtvI?t=538} von 8:58 bis 11:43 (Achtung, im 
 \vspace{1em}
 \begin{enumerate}
  \item Nadel in die höchste Position bringen
- \item Maschine vorsichtig nach hinten kippen (\textcolor{red}{Metallbügel ganz unten am Holzkasten ausklappen, damit die Maschine nicht zusammen mit dem Kasten nach hinten umfällt! Achtung, die Maschine ist nicht fest am unteren Holzkasten befestigt und kann \enquote{herausfallen}.})
+ \item Prüfen, dass der Metallbügel hinten unten am Holzkasten vollständig ausgeklappt ist. Die Maschine vorsichtig nach hinten kippen und dabei festhalten (\textcolor{red}{Sie ist nicht fest im unteren Holzkasten befestigt und kann trotz ausgeklapptem Bügel herausfallen oder umkippen!})
  \item Spulenkapsel herausnehmen
  \item Evtl. noch vorhandene Spule entfernen
  \item Neue Spule einsetzen (Faden muss sich in Richtung des schrägen Schlitzes in der Spulenkapsel abrollen, gegen den Uhrzeigersinn)
@@ -321,6 +232,129 @@ Video: \url{https://youtu.be/UhKprvfHtvI?t=538} von 8:58 bis 11:43 (Achtung, im 
 	\item Beide Fäden nach hinten führen und hinten an der Maschine herunterhängen lassen
 	\item Beide Fäden nicht zu kurz abschneiden (mindestens 5-10cm lang lassen)
 \end{enumerate}
+
+
+\clearpage
+\section{Bedienelemente und Nähen}
+\subsection{Nähfuß anheben und absenken}
+Der Nähfuß kann mit dem Hebel an der Rückseite, links an der Maschine in zwei Positionen gebracht werden:
+\begin{itemize}
+	\item \textbf{abgesenkt:} Nähfußhebel ist unten, Position zum Nähen
+	\item \textbf{angehoben:} Nähfußhebel ist oben, Position zum Einlegen und Entnehmen von Stoff und zum Einfädeln des Fadens
+\end{itemize}
+
+\textcolor{red}{
+	\textbf{Wichtig:} Immer erst losnähen, wenn der Nähfuß abgesenkt ist. Wenn der Nähfuß noch oben ist, sind die Spannungsscheiben für den Oberfaden nicht angezogen.
+	Dadurch wird dieser viel zu weit nach unten durchgezogen. Es bildet sich ein Fadenwulst, der Stoff wird nicht mehr ordentlich transportiert und irgendwann wird auch die Nadel abbrechen. Danach wird es notwendig sein, einen großen Fadenklumpen aus dem Umlaufgreifer zu entfernen.
+	Außerdem ist die Wahrscheinlichkeit groß, dass der Stoff dabei an der Stelle, an der sich die Maschine \enquote{festgefressen} hat, ein Loch haben wird.
+}
+
+\subsection{Stichlänge einstellen}
+Mit dem unteren Einstellrad auf der rechten Seite der Nähmaschine lässt sich die Stichlänge einstellen. Die Skala gibt dabei die ungefähre Stichlänge in Millimetern an.
+
+\subsection{Rückwärts nähen}
+Wenn der Hebel in der Mitte des Stichlängen-Einstellrads heruntergedrückt wird, näht die Maschine rückwärts. Das ist z.\,B. zum Vernähen einer Naht nützlich; siehe Abschnitt~\ref{sec:vernaehen}.
+Sobald der Hebel losgelassen wird, näht die Maschine wieder vorwärts.
+
+
+\pagebreak
+\subsection{Fadenspannung einstellen}
+Die Einstellung der Oberfadenspannung erfolgt durch Drehen am Einstellrad auf der linken Seite der Nähmaschine.
+Die Fadenspannung sollte stets so eingestellt sein, dass sich die Kreuzungspunkte des Ober- und des Unterfadens im zu nähenden Material befinden:
+\begin{center}
+	\resizebox{0.72\linewidth}{!}{\input{zeichnungen/stichbildung}}
+	\par{\small \textbf{Abb. 3:} Die Greiferspitze führt die blaue Oberfadenschlinge um die Spulenkapsel (Kreispfeil). Darunter sind die Nahtbilder bei richtiger, zu hoher und zu geringer Oberfadenspannung zu sehen.}
+\end{center}
+Die Mittelstellung (\enquote{5}) der Oberfadenspannung ist ein guter Ausgangspunkt.
+Prüfe zuerst, ob Ober- und Unterfaden korrekt eingefädelt sind, und nähe eine
+Probe auf einem Reststück des gleichen Stoffs. Passe die Oberfadenspannung so an,
+dass die Verschlingung zwischen den Stofflagen liegt.
+
+\textcolor{red}{\textbf{Solltet ihr dennoch das Gefühl haben, dass die Unterfadenspannung nicht korrekt eingestellt ist, korrigiert diese bitte NIEMALS selbst, sondern informiert die anwesenden Betreuer:innen.}}
+
+\subsection{Zickzack einstellen}
+Neben dem normalen Geradstich beherrscht unsere Pfaff 260 auch noch den Zickzackstich.
+Zwar haben modernere Maschinen noch viele andere nützliche Stichprogramme, jedoch lassen sich mit dem nötigen Wissen schon mit diesen beiden Grundstichen quasi alle Näharbeiten erledigen. Falls du Hilfe brauchen solltest, frag einfach nach. Vielleicht kann dir jemand die entsprechenden Arbeitstechniken zeigen.
+\begin{itemize}
+	\item Das obere Einstellrad an der rechten Seite der Maschine dient zur Einstellung der Breite eines permanenten Zickzackstiches. Die Skala auf dem Rad gibt die ungefähre Breite des Zickzacks in Millimetern an.
+	\item Der Hebel in der Mitte des Einstellrades ermöglicht es, nur momentan einen Zickzackstich zu nähen.
+	Sobald der Hebel wieder losgelassen wird, wird die Maschine wieder zum Geradstich übergehen.
+	Je weiter der Hebel heruntergedrückt wird, desto breiter wird der Zickzackstich.
+\end{itemize}
+
+\subsection{Nadelposition einstellen}
+Mit dem kleinen weißen Hebel unten am Zickzack-Einstellrad lässt sich die Nadelposition nach links oder rechts verstellen.
+Für viele Näharbeiten ist es jedoch ausreichend, die Nadel in der Mittelposition zu belassen.
+Orientiert euch am besten an der Mitte des Nähfußes, um die Nadelposition wieder in Mittelstellung zu bringen.
+
+\subsection{Nählicht ein- und ausschalten}
+Mit dem Knopf auf der rechten Seite unter dem Rückwärtshebel lässt sich das integrierte Nählicht ein- und wieder ausschalten.
+
+\subsection{Transporteur anheben/versenken}
+Der Transporteur ist dafür zuständig, den Stoff beim Nähen automatisch weiterzuschieben.
+\newline Beim Freihandnähen, Stopfen, Sticken und Annähen von Knöpfen muss dieser versenkt werden:
+\begin{itemize}
+	\item Den Hebel an der Grundplatte auf der rechten Seite der Nähmaschine nach vorne, auf dich zu drehen, um den Transporteur zu versenken
+	\item Den Hebel wieder nach hinten, von dir weg drehen, um den Transporteur anzuheben
+\end{itemize}
+
+\subsection{Nahtanfang und Nahtende vernähen}\label{sec:vernaehen}
+\textbf{Vernähen:}
+\newline
+Der Anfang und das Ende einer Naht sollten vernäht werden, damit sich diese nicht wieder von den Enden her aufdröseln kann.
+Üblicherweise bewerkstelligt man das mit einer Nähmaschine, indem man unter Zuhilfenahme der Rückwärtstaste zwei- bis dreimal, 5-10mm lang auf der gleichen Stelle vor und zurück näht.
+Falls die Stelle besonders gut versteckt werden soll, kann man am Anfang und am Ende einer Naht auch ausreichend viel Faden herunterhängen lassen und die Enden anschließend mit der Hand vernähen.
+
+\clearpage
+\section{Nach dem Nähen: Aufräumen und bezahlen}
+\begin{itemize}
+	\item Nähmaschine ausschalten, indem du das Netzkabel \textbf{zuerst(!)} aus der Steckdose ziehst und \textbf{danach(!)} von der Maschine trennst
+	\item Fußanlasser aufräumen
+	\item Stoffstück unter Nähfuß legen und diesen dann absenken
+	\item Transporthaube auf Maschine setzen und mit den seitlichen Schnallen an der Basis der Nähmaschine befestigen
+	\item Nähmaschine aufräumen
+	\item Sonstiges Zubehör, Garn, usw. wieder an seinen Platz verräumen
+	\item Garn- und Stoffreste und Fusseln, die beim Nähen und Schneiden von Textilien auf dem Tisch entstehen, wegfegen und in einen Mülleimer werfen. Danach alles, was auf den Boden gefallen ist, aufsaugen.
+	\item Bezahlen: Die Preise für Stoff und manche andere Materialien, sowie für die Nutzung der Maschine findest du im Kassenterminal unter \enquote{Textilbearbeitung}. Die Benutzung der Maschine (inkl. Faden) ist für Privatpersonen gegen Spende, für Lehrstühle und Unternehmen gibt es einen Preis pro Stunde. Bitte beachte, dass Reparaturen teuer werden können und wir dafür auf deine Spende angewiesen sind.
+\end{itemize}
+
+
+
+\clearpage
+\section{Einweisung: Vorführen und Fragen beantworten}
+Folgende Dinge musst du für eine erfolgreiche Einweisung vorführen bzw. beantworten können:
+\begin{itemize}
+	\item Dinge, die du vorführen können solltest:
+	\begin{itemize}
+		\item Aufbauen, Überprüfen, Einschalten der Maschine
+		\item Ölen des Umlaufgreifers
+		\item Einsetzen der Nadel
+		\item Spulen des Fadens auf die Unterfadenspule
+		\item Einsetzen der Unterfadenspule in die Spulenkapsel
+		\item Einfädeln des Oberfadens
+		\item Wechseln des Nähfußes
+		\item Heraufholen des Unterfadens
+		\item Anpassen der Oberfadenspannung
+		\item Umschalten zwischen Zickzack und Geradstich
+		\item Einstellen der Stichlänge, Stichbreite
+		\item Rückwärtsnähen
+		\item Versenken/Anheben des Transporteurs
+		\item Nählicht ein- und ausschalten
+		\item Abbauen der Maschine
+		\item Zustand, in dem du deinen Arbeitsplatz hinterlassen wirst
+		\item Bezahlen
+	\end{itemize}
+
+	\item Fragen, die du beantworten können solltest:
+	\begin{itemize}
+		\item Welcher ist der Standard-Nähfuß?
+		\item Wo finde ich Nähfußhebel und Einfädlerhebel?
+		\item Warum ist es wichtig, immer mit abgesenktem Nähfuß zu nähen?
+		\item Wo wird die Unterfadenspule eingesetzt?
+		\item Warum sollte man, wann immer möglich, den Transporteur den Stoff durch die Maschine ziehen lassen und das Material lediglich nach links und rechts dirigieren? Was kann passieren, wenn man dennoch am Stoff zieht bzw. diesen schiebt?
+		\item Wo ist der Transporteur, was tut dieser und wo ist der Schalter zum Versenken des Transporteurs?
+	\end{itemize}
+\end{itemize}
 
 
 % schoenere Darstellung
