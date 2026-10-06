@@ -8,11 +8,15 @@ Inhalt
 
 - Seite 1: zentrale Regeln und Sicherheit
 - Seite 2: Inhaltsverzeichnis / Arbeitsablauf mit Kapiteln und Unterkapiteln
-- Arbeitsplatz und Maschine vorbereiten: Aufstellen, Ölen, Anschließen, Nadelwahl und QR-Code zur deutschen Herstelleranleitung
-- Bedienelemente und Nähen: Nähfuß, Stichlänge, Rückwärtsnähen, Fadenspannung, Zickzack, Nadelposition, Transporteur und Vernähen
+- Arbeitsplatz und Maschine vorbereiten: Aufstellen, Ölen, Anschließen, Nadelwahl, Teileübersicht und Verweis auf die passende Herstelleranleitung in der Dateifreigabe
 - Nadel, Nähfuß und Fäden vorbereiten: Wechseln, Einfädeln und Aufspulen
+- Bedienelemente und Nähen: Nähfuß, Stichlänge, Rückwärtsnähen, Fadenspannung, Zickzack, Nadelposition, Transporteur und Vernähen
 - Nach dem Nähen: Maschine abbauen, Arbeitsplatz aufräumen und bezahlen
 - Einweisung: Grundfunktionen vorführen und Fragen beantworten
+
+Die genau passende Herstelleranleitung liegt in `Z:/1_fablab/1_Geraete/Nähmaschine/`.
+Der QR-Code zu Libble ist nur ein Ersatzlink: Die dortige Archivkopie beschreibt
+ein Modell mit zusätzlichen Einstellungen und hat abweichende Seitenzahlen.
 
 Grafiken
 --------
@@ -21,7 +25,7 @@ Die drei nummerierten und beschrifteten Lehrgrafiken werden direkt mit TikZ aus
 `zeichnungen/` erzeugt:
 
 - `maschinenteile.tex`: schematische Maschinenübersicht mit nummerierten Bauteilen
-- `stichbildung.tex`: Stichbildung und Verschlingung von Ober- und Unterfaden
+- `stichbildung.tex`: Stichbildung und Nahtbilder bei richtiger, zu hoher und zu geringer Oberfadenspannung
 - `nadeltypen.tex`: Nadelaufbau und sieben Nadeltypen
 
 Die bisherigen gemeinfreien Abbildungen dienen als inhaltliche Vorlagen; ihre Quellen
@@ -33,6 +37,11 @@ Vorlagen (gemeinfrei):
 - [Maschinenübersicht](https://commons.wikimedia.org/wiki/File:Sewingmachine1.jpg)
 - [Stichbildung](https://de.wikipedia.org/wiki/Datei:N%C3%A4hmaschine-Fig15und16.jpg)
 - [Nadelaufbau und Nadeltypen](https://de.wikipedia.org/wiki/Datei:Sewing-machine-needles-types.jpg)
+
+Fachliche Referenzen:
+
+- [Nadelaufbau (SCHMETZ)](https://www.schmetz.com/en/household-needles/knowledge/needle-anatomy/)
+- [Nahtbilder bei falscher Fadenspannung (Brother)](https://support.brother.com/g/b/faqend.aspx?c=us&faqid=faqh00100034_006&lang=en&pfs=1&prod=hf_fb1757xeus)
 
 Download
 --------

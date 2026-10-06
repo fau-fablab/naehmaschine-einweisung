@@ -23,13 +23,18 @@
 \path[draw=black!65,fill=black!6,line width=.8pt] (5.85,1.45)
  .. controls (6.5,1.95) and (7.95,1.72) .. (8.5,1.2)
  .. controls (7.9,.7) and (6.48,.72) .. (5.85,1.45);
-\draw[-{Stealth},black!65] (6.65,1.2)--(7.65,1.2);
+% Unterfadenspule im Greifer; der Faden läuft durch die Oberfadenschlinge.
+\path[draw=black!65,fill=white,line width=.65pt] (8.05,1.2) circle (.22);
+\draw[black!40] (8.05,1.2) circle (.10);
+\draw[unter] (3.5,2.05) .. controls (4.0,2.05) and (4.65,1.2) .. (5.35,1.2)
+ -- (7.85,1.2);
+\draw[-{Stealth},black!65] (6.65,.95)--(7.45,.95);
 \draw[-{Stealth},black!65] (4.15,3.5)--(4.15,4.18);
 \node[beschriftung] at (5.1,4.0){Nadel}; \draw[black!45] (5.0,3.92)--(4.73,3.8);
-\node[beschriftung] at (6.35,.25){Greifer}; \draw[black!45] (6.3,.4)--(6.25,1.02);
+\node[font=\scriptsize,align=center] at (7.3,.25){Greifer mit\\Unterfadenspule}; \draw[black!45] (6.3,.4)--(6.25,1.02);
 \node[beschriftung,text=fablab] at (0,.6){Oberfadenschlinge}; \draw[fablab!70] (3.55,.66)--(4.53,.95);
 % Fertige Naht mit identifizierbaren Ober- und Unterfäden.
-\node[beschriftung,font=\small\bfseries] at (0,-.65){Fertige Naht: Verschlingung im Stoff};
+\node[beschriftung,font=\small\bfseries] at (0,-.65){Richtig: Verschlingung im Stoff};
 \path[draw=black!40,fill=black!6] (0,-1.75) rectangle (9,-1.25);
 \path[draw=black!40,fill=black!12] (0,-2.25) rectangle (9,-1.75);
 \foreach \x in {.7,1.8,2.9,4.0,5.1,6.2,7.3,8.4}{
@@ -38,6 +43,26 @@
  \draw[unter] (\x-.55,-2.25)--(\x-.15,-2.25) .. controls (\x,-2.25) and (\x-.16,-1.68) .. (\x,-1.68)
  .. controls (\x+.16,-1.68) and (\x,-2.25) .. (\x+.15,-2.25)--(\x+.55,-2.25);
 }
-\draw[ober] (.2,-2.9)--(.8,-2.9); \node[beschriftung] at (1,-2.9){Oberfaden};
-\draw[unter] (4.3,-2.9)--(4.9,-2.9); \node[beschriftung] at (5.1,-2.9){Unterfaden};
+% Zu hohe Oberfadenspannung: Unterfaden wird auf die Oberseite gezogen.
+\node[beschriftung,font=\small\bfseries] at (0,-2.9){Zu hoch: Unterfaden auf der Stoffoberseite};
+\path[draw=black!40,fill=black!6] (0,-4.0) rectangle (9,-3.5);
+\path[draw=black!40,fill=black!12] (0,-4.5) rectangle (9,-4.0);
+\draw[ober] (.15,-3.5)--(8.95,-3.5);
+\foreach \x in {.7,1.8,2.9,4.0,5.1,6.2,7.3,8.4}{
+ \draw[unter] (\x-.55,-4.5)--(\x-.15,-4.5)
+ .. controls (\x,-4.5) and (\x-.16,-3.42) .. (\x,-3.42)
+ .. controls (\x+.16,-3.42) and (\x,-4.5) .. (\x+.15,-4.5)--(\x+.55,-4.5);
+}
+% Zu geringe Oberfadenspannung: Oberfaden wird auf die Unterseite gezogen.
+\node[beschriftung,font=\small\bfseries] at (0,-5.15){Zu gering: Oberfaden auf der Stoffunterseite};
+\path[draw=black!40,fill=black!6] (0,-6.25) rectangle (9,-5.75);
+\path[draw=black!40,fill=black!12] (0,-6.75) rectangle (9,-6.25);
+\draw[unter] (.15,-6.75)--(8.95,-6.75);
+\foreach \x in {.7,1.8,2.9,4.0,5.1,6.2,7.3,8.4}{
+ \draw[ober] (\x-.55,-5.75)--(\x-.14,-5.75)
+ .. controls (\x-.02,-5.75) and (\x-.16,-6.83) .. (\x,-6.83)
+ .. controls (\x+.17,-6.83) and (\x+.02,-5.75) .. (\x+.16,-5.75)--(\x+.55,-5.75);
+}
+\draw[ober] (.2,-7.4)--(.8,-7.4); \node[beschriftung] at (1,-7.4){Oberfaden};
+\draw[unter] (4.3,-7.4)--(4.9,-7.4); \node[beschriftung] at (5.1,-7.4){Unterfaden};
 \end{tikzpicture}
