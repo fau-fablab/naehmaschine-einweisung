@@ -6,15 +6,19 @@ Einweisung des [FAU FabLab](https://fablab.fau.de) für die [Nähmaschine](https
 Inhalt
 ------
 
-- Vor und nach dem Nähen, Regeln und Hinweise
-- Was du für die Einweisung vorführen bzw. beantworten können musst
-- Bedienelemente: Nähfuß, Stichlänge, Rückwärtsnähen, Fadenspannung, Zickzack, Nadelposition
-- Maschine nähbereit machen: Nadeln und Nähfüße wechseln, Ober- und Unterfaden
+- Seite 1: zentrale Regeln und Sicherheit
+- Seite 2: Inhaltsverzeichnis / Arbeitsablauf mit Kapiteln und Unterkapiteln
+- Arbeitsplatz und Maschine vorbereiten: Aufstellen, Ölen, Anschließen, Nadelwahl und QR-Code zur deutschen Herstelleranleitung
+- Bedienelemente und Nähen: Nähfuß, Stichlänge, Rückwärtsnähen, Fadenspannung, Zickzack, Nadelposition, Transporteur und Vernähen
+- Nadel, Nähfuß und Fäden vorbereiten: Wechseln, Einfädeln und Aufspulen
+- Nach dem Nähen: Maschine abbauen, Arbeitsplatz aufräumen und bezahlen
+- Einweisung: Grundfunktionen vorführen und Fragen beantworten
 
 Grafiken
 --------
 
-Die drei Lehrgrafiken werden direkt mit TikZ aus `zeichnungen/` erzeugt:
+Die drei nummerierten und beschrifteten Lehrgrafiken werden direkt mit TikZ aus
+`zeichnungen/` erzeugt:
 
 - `maschinenteile.tex`: schematische Maschinenübersicht mit nummerierten Bauteilen
 - `stichbildung.tex`: Stichbildung und Verschlingung von Ober- und Unterfaden
@@ -49,6 +53,11 @@ git clone --recursive git@github.com:fau-fablab/naehmaschine-einweisung.git
 cd naehmaschine-einweisung
 make
 ```
+
+Für den lokalen Build wird eine TeX-Installation mit `pdflatex`, TikZ/PGF,
+`qrcode` und `xurl` benötigt (z. B. TeX Live oder MacTeX). Änderungen an den
+TikZ-Dateien werden durch die Abhängigkeiten im Makefile beim nächsten `make`
+berücksichtigt.
 
 Die PDFs landen in `output/`. Layout, Kopf- und Fußzeile und das Logo des FAU FabLab (mit
 FAU-Schriftzug) kommen aus dem Untermodul [fablab-document](https://github.com/fau-fablab/fablab-document),
