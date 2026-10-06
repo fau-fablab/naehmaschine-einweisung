@@ -15,14 +15,19 @@
 \renewcommand{\todo}[1]{\textbf{\color{red}{TODO: #1}}}
 \newcommand{\pfeil}{\ensuremath{\rightarrow}}
 
-\date{2020}
-\author{}
+\date{\today}
+\InputIfFileExists{version}{}{\newcommand{\Version}{Entwurf \today}}
+\fancyfoot[R]{Version \Version}
+\author{kontakt@fablab.fau.de}
 \fancyfoot[L]{kontakt@fablab.fau.de}
 \title{Einweisung Nähmaschine Pfaff 260}
 
 
 \begin{document}
 \maketitle
+\begin{center}
+{\small Version \Version}
+\end{center}
 
 \section{Grundlagen}
 
@@ -103,7 +108,11 @@ Folgende Dinge musst du für eine erfolgreiche Einweisung vorführen bzw. beantw
 	\end{itemize}
 \end{itemize}
 
-\pagebreak
+\clearpage
+\renewcommand{\contentsname}{Inhaltsverzeichnis / Arbeitsablauf}
+\setcounter{tocdepth}{2}
+\tableofcontents
+\clearpage
 \section{Bedienelemente und Nähen}
 
 \subsection{Teile der Maschine und Zubehör}
@@ -117,7 +126,7 @@ Eine Anleitung auf Papier findest du bei der Maschine. Dort passen ein paar Klei
 Die wichtigsten Teile einer Nähmaschine (Beispielzeichnung) sind:
 \begin{center}
 	\resizebox{0.95\linewidth}{!}{\input{zeichnungen/maschinenteile}}
-	\par{\small Schematische Beispielzeichnung nach \href{https://commons.wikimedia.org/wiki/File:Sewingmachine1.jpg}{Sewingmachine1.jpg} (gemeinfrei).}
+	\par{\small Die nummerierten Bauteile zeigen den grundlegenden Aufbau einer Nähmaschine. Ihre genaue Form und Anordnung können bei der Pfaff 260 von dieser Beispielzeichnung abweichen.}
 \end{center}
 
 \pagebreak
@@ -149,7 +158,7 @@ Die Einstellung der Oberfadenspannung erfolgt durch Drehen am Einstellrad auf de
 Die Fadenspannung sollte stets so eingestellt sein, dass sich die Kreuzungspunkte des Ober- und des Unterfadens im zu nähenden Material befinden:
 \begin{center}
 	\resizebox{0.72\linewidth}{!}{\input{zeichnungen/stichbildung}}
-	\par{\small Schematisch nach \href{https://de.wikipedia.org/wiki/Datei:N%C3%A4hmaschine-Fig15und16.jpg}{Nähmaschine-Fig15und16.jpg} (gemeinfrei).}
+	\par{\small Der Greifer erfasst die Oberfadenschlinge unter dem Stoff. Bei richtig eingestellter Fadenspannung verschlingen sich Ober- und Unterfaden zwischen den Stofflagen.}
 \end{center}
 Prinzipiell näht die Maschine mit der Oberfadenspannung in Mittelstellung (\enquote{5}) üblicherweise sehr gut.
 Manche Stoffe, Garne oder Nähtechniken machen es allerdings notwendig, diese anzupassen.
@@ -209,7 +218,7 @@ So gibt es z.B. Stretch- u. Jerseynadeln (rundere Spitze, um den feineren Stoff 
 Unten seht ihr eine unvollständige Liste verschiedener Nadeltypen:
 \begin{center}
 	\resizebox{0.88\linewidth}{!}{\input{zeichnungen/nadeltypen}}
-	\par{\small Schematisch nach \href{https://de.wikipedia.org/wiki/Datei:Sewing-machine-needles-types.jpg}{Sewing-machine-needles-types.jpg} (gemeinfrei).}
+	\par{\small Links sind die Bauteile einer Nähmaschinennadel zu sehen, rechts eine Auswahl unterschiedlicher Nadeltypen. Die Spitzen sind zur besseren Unterscheidung vergrößert dargestellt.}
 \end{center}
 
 \subsection{Nadeln wechseln}

@@ -21,8 +21,14 @@ Die drei Lehrgrafiken werden direkt mit TikZ aus `zeichnungen/` erzeugt:
 - `nadeltypen.tex`: Nadelaufbau und sieben Nadeltypen
 
 Die bisherigen gemeinfreien Abbildungen dienen als inhaltliche Vorlagen; ihre Quellen
-sind im Dokument genannt. Die Zeichnungen sind schematisch und nicht maßstäblich.
+sind unten verlinkt. Die Zeichnungen sind schematisch und nicht maßstäblich.
 Die ursprünglichen Bilddateien bleiben als Referenz erhalten.
+
+Vorlagen (gemeinfrei):
+
+- [Maschinenübersicht](https://commons.wikimedia.org/wiki/File:Sewingmachine1.jpg)
+- [Stichbildung](https://de.wikipedia.org/wiki/Datei:N%C3%A4hmaschine-Fig15und16.jpg)
+- [Nadelaufbau und Nadeltypen](https://de.wikipedia.org/wiki/Datei:Sewing-machine-needles-types.jpg)
 
 Download
 --------
