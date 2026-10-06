@@ -11,6 +11,19 @@ Inhalt
 - Bedienelemente: Nähfuß, Stichlänge, Rückwärtsnähen, Fadenspannung, Zickzack, Nadelposition
 - Maschine nähbereit machen: Nadeln und Nähfüße wechseln, Ober- und Unterfaden
 
+Grafiken
+--------
+
+Die drei Lehrgrafiken werden direkt mit TikZ aus `zeichnungen/` erzeugt:
+
+- `maschinenteile.tex`: schematische Maschinenübersicht mit nummerierten Bauteilen
+- `stichbildung.tex`: Stichbildung und Verschlingung von Ober- und Unterfaden
+- `nadeltypen.tex`: Nadelaufbau und sieben Nadeltypen
+
+Die bisherigen gemeinfreien Abbildungen dienen als inhaltliche Vorlagen; ihre Quellen
+sind im Dokument genannt. Die Zeichnungen sind schematisch und nicht maßstäblich.
+Die ursprünglichen Bilddateien bleiben als Referenz erhalten.
+
 Download
 --------
 

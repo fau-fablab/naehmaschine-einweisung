@@ -7,6 +7,9 @@
 \newcommand{\basedir}{fablab-document}
 \documentclass{\basedir/fablab-document}
 
+\usetikzlibrary{arrows.meta}
+\usepackage{xurl}
+
 \renewcommand{\texteuro}{\euro}
 
 \renewcommand{\todo}[1]{\textbf{\color{red}{TODO: #1}}}
@@ -106,17 +109,18 @@ Folgende Dinge musst du für eine erfolgreiche Einweisung vorführen bzw. beantw
 \subsection{Teile der Maschine und Zubehör}
 Eine Abbildung mit der Benennung aller Teile unserer Maschine findest du u.a. auch in der Gebrauchsanleitung.
 
-Eine genau passende Gebrauchsanleitung als PDF liegt auf der Dateifreigabe unter \verb|Z:/1_fablab/1_Geraete/Nähmaschine/|.
+Eine genau passende Gebrauchsanleitung als PDF liegt auf der Dateifreigabe unter \path{Z:/1_fablab/1_Geraete/Nähmaschine/}.
 
 Eine Anleitung auf Papier findest du bei der Maschine. Dort passen ein paar Kleinigkeiten nicht genau, weil die Anleitung für ein komplizierteres Modell ist.
 
 
 Die wichtigsten Teile einer Nähmaschine (Beispielzeichnung) sind:
 \begin{center}
-	\includegraphics[width=0.8\linewidth]{naehmaschine_wichtige_teile.jpg}
-	(abgeändert von \url{https://commons.wikimedia.org/wiki/File:Sewingmachine1.jpg} / public domain)
+	\resizebox{0.95\linewidth}{!}{\input{zeichnungen/maschinenteile}}
+	\par{\small Schematische Beispielzeichnung nach \href{https://commons.wikimedia.org/wiki/File:Sewingmachine1.jpg}{Sewingmachine1.jpg} (gemeinfrei).}
 \end{center}
 
+\pagebreak
 \subsection{Nähfuß anheben und absenken}
 Der Nähfuß kann mit dem Hebel an der Rückseite, links an der Maschine in zwei Positionen gebracht werden:
 \begin{itemize}
@@ -139,13 +143,13 @@ Sobald der Hebel losgelassen wird, näht die Maschine wieder vorwärts.
 
 Du kannst auch das Einstellrad auf \enquote{weniger als null} einstellen, dann näht die Maschine dauerhaft mit kurzer Stichlänge rückwärts.
 
+\pagebreak
 \subsection{Fadenspannung einstellen}
 Die Einstellung der Oberfadenspannung erfolgt durch Drehen am Einstellrad auf der linken Seite der Nähmaschine.
 Die Fadenspannung sollte stets so eingestellt sein, dass sich die Kreuzungspunkte des Ober- und des Unterfadens im zu nähenden Material befinden:
 \begin{center}
-	\includegraphics[width=\linewidth/2]{seam.jpg}
-	\url{https://de.wikipedia.org/wiki/Datei:N%C3%A4hmaschine-Fig15und16.jpg},
-	Lizenz: gemeinfrei
+	\resizebox{0.72\linewidth}{!}{\input{zeichnungen/stichbildung}}
+	\par{\small Schematisch nach \href{https://de.wikipedia.org/wiki/Datei:N%C3%A4hmaschine-Fig15und16.jpg}{Nähmaschine-Fig15und16.jpg} (gemeinfrei).}
 \end{center}
 Prinzipiell näht die Maschine mit der Oberfadenspannung in Mittelstellung (\enquote{5}) üblicherweise sehr gut.
 Manche Stoffe, Garne oder Nähtechniken machen es allerdings notwendig, diese anzupassen.
@@ -204,8 +208,8 @@ So gibt es z.B. Stretch- u. Jerseynadeln (rundere Spitze, um den feineren Stoff 
 
 Unten seht ihr eine unvollständige Liste verschiedener Nadeltypen:
 \begin{center}
-	\includegraphics[width=\linewidth/2]{Sewing-machine-needles-types.jpg}
-	\url{https://de.wikipedia.org/wiki/Datei:Sewing-machine-needles-types.jpg}, Lizenz: public domain
+	\resizebox{0.88\linewidth}{!}{\input{zeichnungen/nadeltypen}}
+	\par{\small Schematisch nach \href{https://de.wikipedia.org/wiki/Datei:Sewing-machine-needles-types.jpg}{Sewing-machine-needles-types.jpg} (gemeinfrei).}
 \end{center}
 
 \subsection{Nadeln wechseln}
