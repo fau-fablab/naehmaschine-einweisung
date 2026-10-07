@@ -1,5 +1,5 @@
 % Prinzip des Doppelsteppstichs nach der bisherigen gemeinfreien Grafik.
-\begin{tikzpicture}[x=1cm,y=1cm,line cap=round,line join=round,
+\begin{tikzpicture}[x=1cm,y=1cm,line cap=round,line join=round,every node/.append style={text=black},
   ober/.style={draw=fablab,line width=1.35pt},
   unter/.style={draw=orange!80!black,line width=1.35pt},
   beschriftung/.style={font=\small,anchor=west}]
@@ -38,8 +38,9 @@
 \node[beschriftung] at (5.1,4.0){Nadel}; \draw[black!45] (5.0,3.92)--(4.73,3.8);
 \node[font=\scriptsize,anchor=west] at (7.8,1.87){Greiferspitze};
 \draw[black!45] (7.78,1.82)--(7.62,1.75);
-\node[font=\scriptsize] at (6.85,-.28){Unterfadenspule};
-\node[beschriftung,text=fablab] at (0,.6){Oberfadenschlinge}; \draw[fablab!70] (3.55,.66)--(4.53,.95);
+\node[beschriftung] at (0,1.45){Unterfadenspule};
+\draw[black!45] (3.25,1.43)--(6.30,.70);
+\node[beschriftung] at (0,.6){Oberfadenschlinge}; \draw[black!45] (3.55,.66)--(4.53,.95);
 % Fertige Naht mit identifizierbaren Ober- und Unterfäden.
 \node[beschriftung,font=\small\bfseries] at (0,-.65){Richtig: Verschlingung im Stoff};
 \path[draw=black!40,fill=black!6] (0,-1.75) rectangle (9,-1.25);
